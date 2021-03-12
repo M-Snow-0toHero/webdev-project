@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Regisztráció</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <img src="pics/logo.png" alt="csacskamacska logo">
+    <a href="main.html">Főoldal</a>
+    <a href="search.html">Macska kereső</a>
+    <a href="adopt.html">Örökbefogadás</a>
+    <a href="about.html">Rólunk</a>
+</header>
+<hr>
+<main>
+<form action="POST">
+    <fieldset>
+    <legend>Regisztráció</legend>
+        <ul>
+            <li>
+                <label for="userName">Felhasználónév</label>
+                <input type="text" id="userName" required>
+            </li>
+            <li>
+                <label for="email">E-mail cím</label>
+                <input type="email" id="email" required>
+            </li>
+            <li>
+                <label for="password">Jelszó</label>
+                <input type="password" id="password" required>
+            </li>
+            <li>
+                <label for="age">Életkor</label>
+                <input type="number" min="18" id="age" required>
+            </li>
+            <li>
+                <label for="address">Lakcím</label>
+                <input type="text" id="address" required>
+            </li>
+            <li>
+                <label for="phoneNum">Telefonszám</label>
+                <input type="tel" id="phoneNum" required>
+            </li>
+        </ul>
+        <button type="submit">Regisztráció</button>
+    </fieldset>
+</form>
+</main>
+<footer>©A Csapat 2021</footer>
+</body>
+</html>
