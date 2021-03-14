@@ -5,14 +5,44 @@
 body {
     margin: 0;
     background: url('../pics/bg.jpg') fixed;
+    background-size: cover;
     color: white;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }
-img {
-    max-width: 10%;
+header img {
+    float: left;
+    min-width: 10rem;
+    padding-left: 10px;
+}
+
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 ul {
     list-style: none;
+    margin: 0;
+}
+
+li a{
+    float: right;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid pink;
+    margin: 25px 20px 0 0;
+    border-radius: 10px;
+}
+li a:hover, .registForm button:hover, .searchFrom button:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: .3s;
+}
+h4  {
+    text-align: center;
 }
 iframe {
     position: absolute;
@@ -22,14 +52,37 @@ iframe {
     right: 0;
     width: 100%;
     height: 100%;
-   
 }
-.iframe{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
+footer {
+    text-align: center;
+    margin-top: 4rem;
 }
+.welcome{
+    display: flex;
+    margin: 7rem 30px;
+}
+.welcome button{
+    padding: 2rem 3rem;
+    color: black;
+    background-color: pink;
+    border-radius: 10px;
+    box-shadow: 0px 0px 11px 0px pink;
+    font-size: 2rem;
+    margin-left: 4rem;
+    cursor: pointer;
+    animation-name: button;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes button{
+    0% {color: black; background-color: pink;}
+    25% {color: pink; background-color: black;}
+    50% {color: black; background-color: pink;}
+    75% {color: pink; background-color: black;}
+    100% {color: black; background-color: pink;}
+}
+
 .wrapper {
     max-width: 1200px;
     width: 90%;
@@ -38,5 +91,212 @@ iframe {
     min-height: 100vh;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 0px black;
+}
+
+.iframe{
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 2rem 10%;
+    padding-top: 56.25%;
+ }
+
+.mainImages {
+      display: grid;
+      height: 30vh;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 300px;
+      grid-gap: 2rem;
+      margin: 30px;
+}
+#mainImage1{
+    border: 1px solid pink;
+    overflow: hidden;
+}
+.mainImage11{
+    background-image: url('../pics/Cirmi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: img11;
+    height: 100%;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes img11{
+    0% {height: 100%;}
+    25% {height: 0%;}
+    50% {height: 0%;}
+    75% {height: 100%;}
+    100% {height: 100%;}
+}
+.mainImage12{
+    background-image: url('../pics/Dezso.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#mainImage2{
+    border: 1px solid pink;
+    overflow: hidden;
+}
+.mainImage21{
+    background-image: url('../pics/Juan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: img21;
+    height: 100%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes img21{
+    0% {height: 100%;}
+    25% {height: 0%;}
+    50% {height: 0%;}
+    75% {height: 100%;}
+    100% {height: 100%;}
+}
+.mainImage22{
+    background-image: url('../pics/Dracula.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+#mainImage3{
+    border: 1px solid pink;
+    overflow: hidden;
+}
+.mainImage31{
+    background-image: url('../pics/Irenke.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: img31;
+    height: 100%;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes img31{
+    0% {height: 100%;}
+    25% {height: 0%;}
+    50% {height: 0%;}
+    75% {height: 100%;}
+    100% {height: 100%;}
+}
+.mainImage32{
+    background-image: url('../pics/Gazsi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+/* -------------Adopt-------------------*/
+
+
+legend {
+    text-align: center;
+    font-style: italic;
+}
+.registForm form {
+    text-align: left;
+    margin: 2vh 20%;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.registForm input {
+    text-align: left;
+    margin: 2vh 20%;
+    font-size: 1.5rem;
+}
+
+.registForm button, .searchFrom button {
+    font-size: 1.5rem;
+    margin: 10px 35%;
+    color: white;
+    background-color: black;
+    border: 1px solid pink;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=email]:focus {
+    background-color: pink;
+  }
+
+/* -------------Search-------------------*/
+.searchFrom form {
+  text-align: center;
+  margin: 4rem 30%;
+  font-size: 1.5rem;
+}
+.searchFrom li {
+    text-align: left;
+    margin: 2rem;
+}
+#ideal h1 {
+    text-align: center;
+}
+/* -------------Adopt-------------------*/
+.osszes {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr;
+    grid-gap: 25px;
+    margin: 2rem;
+    text-align: justify;
+    
+}
+.osszes h4 {
+    border: 1px solid pink;
+    background-color: rgba(168, 36, 157, 0.459);
+}
+.osszes img {
+    max-width: 330px;
+}
+.macska1, .macska2, .macska3, .macska4, .macska5, .macska6 {
+    border-bottom: 1px solid white;
+}
+
+/* -------------About-------------------*/
+.intro , .adoptation{
+    line-height: 2;
+    text-align: justify;
+    margin: 0 30px;
+}
+.intro img, .adoptation img{
+    max-width: 80%;
+    margin: 10px 10%;
+}
+table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 4rem 10%;
+    border-radius: 10px;
+}
+table td, table th {
+    padding: 15px;
+    border: 1px solid pink;
+}
+table tr:nth-child(even){
+    background-color: rgba(255, 192, 203, 0.726);
+    color: black;
+
+}
+.contact {
+    text-align: justify;
+    font-size: 2rem;
+    margin: 4rem 20%;
+    border: 1px dashed pink;
+    border-radius: 10px;
+    padding: 20px;
+}
+.contact a {
+    text-decoration: none;
+    color: white;
 }
 

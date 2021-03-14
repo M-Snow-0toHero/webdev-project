@@ -6,53 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="pics/favicon.png" type="image/x-icon">
 </head>
 <body>
 <div class="wrapper">
     <header>
         <img src="pics/logo.png" alt="csacskamacska logo">
-        <a href="main.html">Főoldal</a>
-        <a href="regist.html">Regisztráció</a>
-        <a href="search.html">Macska kereső</a>
-        <a href="adopt.html">Örökbefogadás</a>
-        <a href="about.html">Rólunk</a>
+        <nav>
+            <ul>
+                <li><a href="about.html">Rólunk</a></li>
+                <li><a href="adopt.html">Örökbefogadás</a></li>
+                <li><a href="search.html">Macska kereső</a></li>
+                <li><a href="regist.html">Regisztráció</a></li>
+                <li><a href="main.html">Főoldal</a></li>
+            </ul>
+        </nav>
     </header>
     <hr>
     <main>
-        <form action="GET">
-            <fieldset>
-            <legend>Idális cicus kereső</legend>
-                <ul>
-                    <li>
-                        <p>A macska neme:</p>
-                        <label for="genderM">Kandúr</label>
-                        <input type="radio" id="genderM" name="gender" value="male" required>
-                        <label for="genderF">Nőstény</label>
-                        <input type="radio" id="genderF" name="gender" value="female" required>
-                    </li>
-                    <li>
-                        <label for="age">Életkora:</label>
-                        <input type="number" min="1" max="20" id="age" required>
-                    </li>
-                    <li>
-                        <p>Színe:</p>
-                        <label for="white">Fehér</label>
-                        <input type="checkbox" id="white" value="0" required>
-                        <label for="grey">Szürke</label>
-                        <input type="checkbox" id="grey" value="1">
-                        <label for="brown">Barna</label>
-                        <input type="checkbox" id="brown" value="2">
-                        <label for="red">Vörös</label>
-                        <input type="checkbox" id="red" value="3">
-                        <label for="cirmos">Cirmos</label>
-                        <input type="checkbox" id="cirmos" value="4">
-                        <label for="any">Mindegy</label>
-                        <input type="checkbox" id="any" value="5">
-                    </li>
-                </ul>
-                <button type="submit">Keresés</button>
-            </fieldset>
-        </form>
+        <div class="searchFrom">
+            <form action="GET">
+                <fieldset>
+                <legend>Idális cicus kereső</legend>
+                    <ul>
+                        <li>
+                            <p>A macska neme:</p>
+                            <label for="genderM">Kandúr</label>
+                            <input type="radio" id="genderM" name="gender" value="male" required>
+                            <label for="genderF">Nőstény</label>
+                            <input type="radio" id="genderF" name="gender" value="female" required>
+                        </li>
+                        <li>
+                            <label for="age">Életkora:</label>
+                            <input type="number" min="1" max="20" id="age" required>
+                        </li>
+                        <li>
+                            <p>Színe:</p>
+                            <label for="white">Fehér</label>
+                            <input type="checkbox" id="white" value="0" required>
+                            <label for="grey">Szürke</label>
+                            <input type="checkbox" id="grey" value="1">
+                            <label for="brown">Barna</label>
+                            <input type="checkbox" id="brown" value="2">
+                            <label for="red">Vörös</label>
+                            <input type="checkbox" id="red" value="3">
+                            <label for="cirmos">Cirmos</label>
+                            <input type="checkbox" id="cirmos" value="4">
+                            <label for="any">Mindegy</label>
+                            <input type="checkbox" id="any" value="5">
+                        </li>
+                    </ul>
+                    <button type="submit">Keresés</button>
+                </fieldset>
+            </form>
+        </div>
+        <div id="ideal"><h1>Az ideális cicus:</h1></div>
     </main>
     <footer>©A Csapat 2021</footer>
 </div>
