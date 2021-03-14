@@ -35,7 +35,7 @@ li a{
     margin: 25px 20px 0 0;
     border-radius: 10px;
 }
-li a:hover, .registForm button:hover, .searchFrom button:hover {
+li a:hover, .registForm button:hover, .searchFrom button:hover, .login button:hover {
     background: white;
     color: black;
     cursor: pointer;
@@ -55,15 +55,31 @@ iframe {
 }
 footer {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
 }
 .welcome{
     display: flex;
-    margin: 7rem 30px;
+    margin: 3rem 30px 7rem 30px;
+}
+.welcome a {
+    text-decoration: none;
+    color: black;
+    animation-name: buttonLink;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    padding: 3.5rem;
+
+}
+@keyframes buttonLink{
+    0% {color: black}
+    25% {color: pink}
+    50% {color: black}
+    75% {color: pink}
+    100% {color: black}
 }
 .welcome button{
-    padding: 2rem 3rem;
-    color: black;
+
     background-color: pink;
     border-radius: 10px;
     box-shadow: 0px 0px 11px 0px pink;
@@ -76,11 +92,11 @@ footer {
     
 }
 @keyframes button{
-    0% {color: black; background-color: pink;}
-    25% {color: pink; background-color: black;}
-    50% {color: black; background-color: pink;}
-    75% {color: pink; background-color: black;}
-    100% {color: black; background-color: pink;}
+    0% {background-color: pink}
+    25% {background-color: black}
+    50% {background-color: pink}
+    75% {background-color: black}
+    100% {background-color: pink}
 }
 
 .wrapper {
@@ -92,7 +108,18 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 0px 15px 0px black;
 }
-
+.login {
+    text-align: right;
+    font-size: 1rem;
+    margin: 2rem 2rem 0 0;
+}
+.login button {
+    border-radius: 10px;
+    color: white;
+    background: black;
+    padding: 6px;
+    border: 1px solid pink;
+}
 .iframe{
     position: relative;
     overflow: hidden;
@@ -235,7 +262,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input
 }
 .searchFrom li {
     text-align: left;
-    margin: 2rem;
+    margin: 1.3rem;
 }
 #ideal h1 {
     text-align: center;
@@ -299,4 +326,30 @@ table tr:nth-child(even){
     text-decoration: none;
     color: white;
 }
+/*--------nyomtatasi stiluslap fooldalhoz ----------*/
+@media print {  
+    p, h1, h3, h4{ 
+        font-size: 12pt; 
+        font-weight: lighter;
+    }            
+    image, button {
+         display: none; 
+        }   
+    h1, h2, h3 { 
+        page-break-after: avoid; 
+    } 
+    .welcome, footer {
+        margin: 0;
+    }
+    li a {
+        border: none;
+        font-size: 12pt;
 
+    }
+    #mainImage1, #mainImage2, #mainImage3 {
+        display: none;
+    }
+}
+@page { 
+    margin: 0.5cm; 
+}
